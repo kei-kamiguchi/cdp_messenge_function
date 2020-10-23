@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <h2>Conversations</h2>
+  </thead>
+  <tbody>
+    <% @conversations.each do |conversation| %>
+      <td>
+        <%= link_to conversation.target_user(current_user).name, conversation_messages_path(conversation)%>
+      </td>
+    <% end %>
+  </tbody>
+</table>
